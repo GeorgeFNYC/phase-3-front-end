@@ -2,7 +2,12 @@ import logo from './Logo.png'
 import flag from './flag.png'
 import './App.css';
 
+import {useState} from 'react'
+
 function App() {
+
+  const[hide, setHide] = useState(true)
+
   return (
     <div className="container">
       <div id='topRow' className='row'></div>
@@ -14,7 +19,7 @@ function App() {
             <h1 className='homePG_HTag'>Ressport</h1>
             <img id="logoHP"src={logo} alt="logo"/>
             <div><a href='/' id ='homeLogIn'>Login</a></div>
-            <h2 className='homePG_HTag'>New York City</h2>
+            <h2 style={{fontStyle: 'italic'}}className='homePG_HTag'>New York City</h2>
             <img id="flagHP" src={flag} alt="flagLogo"/>
           </div>
         </div>
