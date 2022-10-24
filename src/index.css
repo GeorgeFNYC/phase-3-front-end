@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#topRow {
+  margin-top: 50px;
+}
+#ressportHP {
+  background-color: #003875;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  height: 85vh;
+  box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53);
+  -webkit-box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53);
+  -moz-box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53);
+}
+.homePG_HTag{
+  color: #F7F49A;
+  margin: 55px 0;
+}
+#logoHP {
+  width: 180px;
+  margin: 30px 0;
+}
+#homeLogIn {
+  color: #F7F49A;
+  font-size: 2em;
+}
+#flagHP {
+  width: 30px;
+}
