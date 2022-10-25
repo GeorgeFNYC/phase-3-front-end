@@ -151,25 +151,7 @@ code {
   margin: 25px;
   float: right;
 }
-progress {
-  opacity: 0;
-}
-.progress-container {
-  position: relative;
-  display: inline-block;
-  background: #eee;
-  height: 20px;
-  border-radius: 6px;
-  overflow: hidden;
-  width: 65%;
-  margin-top: 25px;
-}
-.progress-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 90%;
-  background: #003875;
+.progressBar {
+  width: 75%;
+  margin-top: 15px;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import '../App.css'
@@ -6,6 +6,12 @@ import bk from '../brooklynStamp.png'
 import man from '../manhattanStamp.png'
 
 function Progress() {
+
+    const[bar, setBar] = useState(null)
+    
+    const progressForStamp = 60;
+
+
   return (
     <div className='container'>
         <div className='row topRow'></div>
@@ -16,13 +22,16 @@ function Progress() {
                     <br/>
                     <br/>
                     <br/>
-                    <br/>
                     <h3>Brooklyn</h3>
-                        <ProgressBar variant='info' now={30}/>
-                    <br/>
-                    <br/>
+                        <ProgressBar className='progressBar' variant='info' now={progressForStamp}/>
                     <h3>Manhattan</h3>
-                    <ProgressBar variant='info' now={100}/>
+                        <ProgressBar className='progressBar' variant='info' now={progressForStamp}/>
+                    <h3>Queens</h3>
+                        <ProgressBar className='progressBar' now={100} label={'Coming Soon'}/>
+                    <h3>Bronx</h3>
+                        <ProgressBar className='progressBar' now={100} label={'Coming Soon'}/>
+                    <h3>Staten Island</h3>
+                        <ProgressBar className='progressBar' now={100} label={'Coming Soon'}/>
                 </div>
                 <div className='col-lg-6 rightContent'>
                     <h2>Stamps collected</h2>
