@@ -15,7 +15,7 @@ code {
   height: 100vh;
 
 }
-/*******************************   Login/ Landing Page   ***************************************/
+/*******************************   Login/ Landing Page Component  ***************************************/
 #topRow {
   margin-top: 50px;
 }
@@ -64,7 +64,7 @@ code {
 #flagHP {
   width: 30px;
 }
-/**********************************   ****************************/
+/**********************************  Welcome page component w/ visited and wishlist  ****************************/
 
 /* #welcomeDiv {
   background-color: #003875;
@@ -126,18 +126,18 @@ code {
   margin-top: 20px;
 }
             
-#welcomeContent {
+#visitedContent {
   position: relative;
-  z-index: 100;
 }
-
-
-
-
-
+#wishlistContent {
+  position: relative;
+  z-index: 2;
+  margin-top: 9px;
+}
 /* #insideBook {
   background-color: #B3D7E9;
   height: 80vh;
   margin-top: 20px;
   border-radius: 25px;
 } */
+/************************   Progress page component   **************************/

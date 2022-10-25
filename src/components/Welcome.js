@@ -9,10 +9,14 @@ function Welcome() {
 
         <div id='welcomeDiv' className='col-lg-12'>
           <div id='insideBook' className='col-lg-12'>
-            <div id='welcomeContent'>
+            <div className='col-lg-6'id='visitedContent'>
               <h2>Visited</h2>
+              <p>Restaurant 1</p>
             </div>
-            
+            <div className='col-lg-6' id='wishlistContent'>
+              <h2>Wishlist</h2>
+              <p>Restaurant 1</p>
+            </div>
           </div>
         </div>
 
