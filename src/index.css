@@ -7,10 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: 'Baskervville', serif;
 }
+#root {
+  background-image: linear-gradient(to right, rgba(255,255,255), rgba(0,145,255,0.4));
+  height: 100vh;
+
+}
+/*******************************   Login/ Landing Page   ***************************************/
 #topRow {
   margin-top: 50px;
 }
@@ -59,3 +64,80 @@ code {
 #flagHP {
   width: 30px;
 }
+/**********************************   ****************************/
+
+/* #welcomeDiv {
+  background-color: #003875;
+  height: 85vh;
+  box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53); 
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+} */
+#welcomeDiv:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 85vh;
+  width: 51%;
+  background-color: #003875;
+  transform: skew(0deg, 1deg);
+  border-radius: 25px;
+}
+#welcomeDiv:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 85vh;
+  width: 50%;
+  background-color: #003875;
+  transform: skew(0deg, -1deg);
+  border-radius: 25px;
+  z-index: 0;
+  box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53); 
+}
+#insideBook:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 51%;
+  background-color: #B3D7E9;
+  transform: skew(0deg, 1deg);
+  border-radius: 25px;
+  margin-top: 20px;
+}
+#insideBook:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80vh;
+  width: 50%;
+  background-color: #B3D7E9;
+  transform: skew(0deg, -1deg);
+  border-radius: 25px;
+  z-index: 1;
+  margin-top: 20px;
+}
+            
+#welcomeContent {
+  position: relative;
+  z-index: 100;
+}
+
+
+
+
+
+/* #insideBook {
+  background-color: #B3D7E9;
+  height: 80vh;
+  margin-top: 20px;
+  border-radius: 25px;
+} */
