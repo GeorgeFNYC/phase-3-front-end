@@ -16,7 +16,7 @@ code {
 
 }
 /*******************************   Login/ Landing Page Component  ***************************************/
-#topRow {
+.topRow {
   margin-top: 50px;
 }
 #ressportHP {
@@ -76,7 +76,7 @@ code {
   padding: 12px;
   margin-bottom: 6px;
 } */
-#welcomeDiv:before {
+.bookCover:before {
   content: '';
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@ code {
   transform: skew(0deg, 1deg);
   border-radius: 25px;
 }
-#welcomeDiv:after {
+.bookCover:after {
   content: '';
   position: absolute;
   top: 0;
@@ -100,7 +100,7 @@ code {
   z-index: 0;
   box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53); 
 }
-#insideBook:before {
+.insideBook:before {
   content: '';
   position: absolute;
   top: 0;
@@ -112,7 +112,7 @@ code {
   border-radius: 25px;
   margin-top: 20px;
 }
-#insideBook:after {
+.insideBook:after {
   content: '';
   position: absolute;
   top: 0;
@@ -126,10 +126,10 @@ code {
   margin-top: 20px;
 }
             
-#visitedContent {
+.leftContent {
   position: relative;
 }
-#wishlistContent {
+.rightContent {
   position: relative;
   z-index: 2;
   margin-top: 9px;
