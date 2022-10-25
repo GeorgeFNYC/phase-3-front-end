@@ -127,12 +127,11 @@ code {
 }
             
 .leftContent {
-  position: relative;
+  margin-top: 8px;
 }
 .rightContent {
-  position: relative;
   z-index: 2;
-  margin-top: 9px;
+  margin-top: 12px;
 }
 /* #insideBook {
   background-color: #B3D7E9;
@@ -141,3 +140,36 @@ code {
   border-radius: 25px;
 } */
 /************************   Progress page component   **************************/
+
+#bkStamp {
+  rotate: 15deg;
+  width: 55%;
+  margin: 25px;
+}
+#manStamp {
+  width: 53%;
+  margin: 25px;
+  float: right;
+}
+progress {
+  opacity: 0;
+}
+.progress-container {
+  position: relative;
+  display: inline-block;
+  background: #eee;
+  height: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 65%;
+  margin-top: 25px;
+}
+.progress-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  background: #003875;
+}
