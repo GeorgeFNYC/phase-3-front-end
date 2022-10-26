@@ -15,12 +15,18 @@ code {
   height: 100vh;
 
 }
+
+:root {
+  --color-cover: #003875;
+  --color-pages: #B3D7E9;
+  --color-home: #F7F49A;
+}
 /*******************************   Login/ Landing Page Component  ***************************************/
 .topRow {
   margin-top: 50px;
 }
 #ressportHP {
-  background-color: #003875;
+  background-color: var(--color-cover);
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
   text-align: center;
@@ -30,7 +36,7 @@ code {
   -moz-box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53);
 }
 .homePG_HTag{
-  color: #F7F49A;
+  color: var(--color-home);
   margin: 45px 0;
 }
 #logoHP {
@@ -38,7 +44,7 @@ code {
   margin: 30px 0;
 }
 #homeLogIn {
-  color: #F7F49A;
+  color: var(--color-home);
   font-size: 2em;
   text-decoration: none;
   display: inline-block;
@@ -53,7 +59,7 @@ code {
     height: 1px;
     left: 50%;
     position: absolute;
-    background: #F7F49A;
+    background: var(--color-home);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -83,7 +89,7 @@ code {
   left: 0;
   height: 85vh;
   width: 51%;
-  background-color: #003875;
+  background-color: var(--color-cover);
   transform: skew(0deg, 1deg);
   border-radius: 25px;
 }
@@ -94,7 +100,7 @@ code {
   right: 0;
   height: 85vh;
   width: 50%;
-  background-color: #003875;
+  background-color: var(--color-cover);
   transform: skew(0deg, -1deg);
   border-radius: 25px;
   z-index: 0;
@@ -107,7 +113,7 @@ code {
   left: 0;
   height: 80vh;
   width: 51%;
-  background-color: #B3D7E9;
+  background-color: var(--color-pages);
   transform: skew(0deg, 1deg);
   border-radius: 25px;
   margin-top: 20px;
@@ -119,7 +125,7 @@ code {
   right: 0;
   height: 80vh;
   width: 50%;
-  background-color: #B3D7E9;
+  background-color:  var(--color-pages);
   transform: skew(0deg, -1deg);
   border-radius: 25px;
   z-index: 1;
@@ -128,6 +134,8 @@ code {
             
 .leftContent {
   margin-top: 8px;
+  /* height: 666.398px;
+  overflow: scroll; */
 }
 .rightContent {
   z-index: 2;
@@ -154,4 +162,26 @@ code {
 .progressBar {
   width: 75%;
   margin-top: 15px;
+}
+/************************   Restaurants page component   **************************/
+li {
+  list-style: none;
+  font-size: 2.2rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 2;
+}
+li::before {
+  content: '';
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-image: url(./ForkLi.png);
+  background-size: auto 35px;
+  background-repeat: no-repeat;
+}
+#resRow {
+  overflow: scroll;
+  height: 45em;
 }

@@ -17,7 +17,7 @@ function Login() {
           <h1 className='homePG_HTag'>Ressport</h1>
           <img id="logoHP"src={logo} alt="logo"/>
           <div id='helloConsole'>
-            <a href='/' id='homeLogIn'>Login</a>
+            <a href='/welcome' id='homeLogIn'>Login</a>
           </div>
           <h2 style={{fontStyle: 'italic'}}className='homePG_HTag'>New York City</h2>
           <img id="flagHP" src={flag} alt="flagLogo"/>

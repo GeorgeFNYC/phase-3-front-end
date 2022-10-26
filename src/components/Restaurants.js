@@ -19,18 +19,19 @@ const handleClick = () => {
         <div className='col-lg-12 bookCover'>
             <div className='col-lg-12 insideBook'>
                 <div className='col-lg-6 leftContent'>
-                    <h2>Restaurants</h2>
-
-                    <ul>
+                    <div className='row'>
+                        <h2>Restaurants</h2>
+                    </div>
+                    <div id='resRow'className='row'>
+                        <ul>
                             {restaurants.map((res) => 
                                 <>
                                     <li key={res.id}>{res.name}</li>
-                                    <button>Add to Wishlist</button>
-                                    <button onClick = {handleClick} >More Info</button>
+                                    <span>Add +</span>
                                 </>
                             )}
-                    </ul>
-                    
+                        </ul>
+                    </div>
                 </div>
                 <div className='col-lg-6 rightContent'>
                     

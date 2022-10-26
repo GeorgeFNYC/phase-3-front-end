@@ -1,8 +1,8 @@
 
 import '../App.css';
 import Login from './Login'
-//import Welcome from './Welcome'
-//import Progress from './Progress'
+import Welcome from './Welcome'
+import Progress from './Progress'
 import Restaurants from './Restaurants';
 
 
@@ -20,25 +20,20 @@ function App() {
     .then(restaurants => setRestaurants(restaurants));
   },[])
 
-  //console.log(restaurants, 'From App.js')
+  console.log(restaurants, 'From App.js')
 
   // console.log(restaurants[0].reviews)
 
   //const[hide, setHide] = useState(true)
 
   return (
-    <>       
-          <Routes>
-            <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} />} />
-          </Routes>
-        {/* <Route exact path="/login" element={<Login />}></Route>
+    <>
+      <Routes>
+        <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} />} />
+        <Route exact path="/login" element={<Login />}></Route>
         <Route exact path='/welcome' element={<Welcome />}></Route>
-        <Route exact path='/progress' element={<Progress />}></Route> */}
-        {/* <Routes>
-          <Route exact path='/restaurants' element={<Restaurants />}>
-            <Restaurants  restaurants={restaurants} />
-          </Route>
-        </Routes> */}
+        <Route exact path='/progress' element={<Progress />}></Route> 
+      </Routes>
     </>
   );
 
