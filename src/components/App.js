@@ -14,6 +14,7 @@ function App() {
 
   const [restaurants, setRestaurants] = useState([])
   const [wish, setWish] = useState([])
+  const [visited, setVisited] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:9292/restaurants')
@@ -22,10 +23,26 @@ function App() {
 
     fetch('http://localhost:9292/wishlist')
     .then((response) => response.json())
-    .then(wishlist => setWish(wishlist));
+    .then(wishlist => {
+      setWish(wishlist) 
+      //setVisited(wishlist)
+    });
+
+
+    fetch('http://localhost:9292/eated')
+    .then((response) => response.json())
+    .then(visited => {
+      setVisited(visited) 
+      //setVisited(wishlist)
+    });
+
+
+    // fetch('http://localhost:9292/wishlist')
+    // .then((response) => response.json())
+    // .then(visitedList => setVisited(visitedList));
   },[])
 
-  console.log(restaurants, 'From App.js')
+  
 
   // console.log(restaurants[0].reviews)
 
@@ -35,8 +52,8 @@ function App() {
     <>
       <Routes>
         <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} />} />
-        <Route exact path="/login" element={<Login />}></Route>
-        <Route exact path='/welcome' element={<Welcome wishlist={wish}/>}></Route>
+        <Route exact path="/" element={<Login />}></Route>
+        <Route exact path='/welcome' element={<Welcome wishlist={wish} beento={visited} />}></Route>
         <Route exact path='/progress' element={<Progress />}></Route> 
         <Route exact path='/restaurantsInfo' element={<RestaurantInfo />}></Route>
       </Routes>

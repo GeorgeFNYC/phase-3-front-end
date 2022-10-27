@@ -20,6 +20,24 @@ function showRestaurants (restaurant) {
     setShowRes(restaurant)
 }
 
+
+// const addToBeenTo = (restaurant) => {
+//     fetch('http://localhost:9292/wishlist',
+    
+//     {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({
+//             restaurant_id: restaurant.id,
+//             user_id: 1
+//             // been_to: false
+//         })
+//     })
+//     .then((res) => res.json())
+//     .then((data) => console.log(data))
+// }
+
+
 const addToWishList = (restaurant) => {
     console.log(restaurant.id)
     fetch('http://localhost:9292/wishlist',
@@ -36,6 +54,35 @@ const addToWishList = (restaurant) => {
     .then((res) => res.json())
     .then((data) => console.log(data))
 }
+
+const handleDeleteClick = (restaurants) => {
+    fetch(`http://localhost:9292/wishlist/${restaurants.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then((data) => console.log(data))
+      }
+
+
+
+
+const addToVisited = (restaurant) => {
+    console.log(restaurant.id)
+    fetch('http://localhost:9292/eated',
+    
+    {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            restaurant_id: restaurant.id,
+            user_id: 1
+        })
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+}
+
+
 
   return (
     <div className='container'>
@@ -57,7 +104,7 @@ const addToWishList = (restaurant) => {
                     </div>
                 </div>
                 <div className='col-lg-6 rightContent'>
-                        <RestaurantInfo restaurants={showRes} info={info} addToWishList={addToWishList}/>
+                        <RestaurantInfo restaurants={showRes} info={info} addToWishList={addToWishList} addToVisited={addToVisited} handleDeleteClick={handleDeleteClick}/>
                         
                 </div>
             </div>

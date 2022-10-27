@@ -230,7 +230,17 @@ h2 {
 #borough, #address{
   margin-left: 3rem;
 }
-#addResBtn{
+.addResBtn{
   margin-left: 3rem;
   margin-top: 1rem;
+}
+.addResBtn {
+  font-size: 1.7rem;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+  color: var(--color-cover);
+}
+.addResBtn:hover {
+  background-color: var(--color-pages);
 }
