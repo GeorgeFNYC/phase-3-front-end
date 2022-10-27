@@ -1,7 +1,6 @@
 import React,{ useState } from 'react'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
-import '../App.css'
 import bk from '../brooklynStamp.png'
 import man from '../manhattanStamp.png'
 

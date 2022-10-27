@@ -1,7 +1,5 @@
 import logo from '../Logo.png'
 import flag from '../flag.png'
-import '../App.css'
-//import Welcome from './Welcome'
 
 import React from 'react'
 

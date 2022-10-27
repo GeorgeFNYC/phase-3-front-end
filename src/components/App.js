@@ -1,5 +1,4 @@
 
-import '../App.css';
 import Login from './Login'
 import Welcome from './Welcome'
 import Progress from './Progress'

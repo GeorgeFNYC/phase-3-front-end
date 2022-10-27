@@ -13,9 +13,7 @@ code {
 #root {
   background-image: linear-gradient(to right, rgba(255,255,255), rgba(0,145,255,0.4));
   height: 100vh;
-
 }
-
 :root {
   --color-cover: #003875;
   --color-pages: #B3D7E9;
@@ -90,7 +88,7 @@ code {
   height: 85vh;
   width: 51%;
   background-color: var(--color-cover);
-  transform: skew(0deg, 1deg);
+  transform: skew(0deg, 0.2deg);
   border-radius: 25px;
 }
 .bookCover:after {
@@ -101,7 +99,7 @@ code {
   height: 85vh;
   width: 50%;
   background-color: var(--color-cover);
-  transform: skew(0deg, -1deg);
+  transform: skew(0deg, -0.2deg);
   border-radius: 25px;
   z-index: 0;
   box-shadow: 20px 28px 49px -10px rgba(0,0,0,0.53); 
@@ -114,7 +112,7 @@ code {
   height: 80vh;
   width: 51%;
   background-color: var(--color-pages);
-  transform: skew(0deg, 1deg);
+  transform: skew(0deg, 0.2deg);
   border-radius: 25px;
   margin-top: 20px;
 }
@@ -126,12 +124,11 @@ code {
   height: 80vh;
   width: 50%;
   background-color:  var(--color-pages);
-  transform: skew(0deg, -1deg);
+  transform: skew(0deg, -0.2deg);
   border-radius: 25px;
   z-index: 1;
   margin-top: 20px;
 }
-            
 .leftContent {
   margin-top: 8px;
   /* height: 666.398px;
@@ -164,24 +161,47 @@ code {
   margin-top: 15px;
 }
 /************************   Restaurants page component   **************************/
-li {
+ul li {
   list-style: none;
-  font-size: 2.2rem;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  line-height: 2;
+  padding-left: 50px;
+  position: relative;
 }
-li::before {
-  content: '';
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 5px;
   display: inline-block;
-  height: 15px;
-  width: 15px;
-  background-image: url(./ForkLi.png);
-  background-size: auto 35px;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-image: url("./Logo.png");
   background-repeat: no-repeat;
 }
 #resRow {
   overflow: scroll;
-  height: 45em;
+  height: 43em;
+}
+/***  👆🏽 Left side if the book  ***/
+
+/***  👇🏽 Right side if the book  ***/
+#resImg {
+  width: 90%;
+  height: 300px;
+  border-radius: 20px;
+  /* rotate: -.8deg; */
+  margin-left: 3rem;
+  border: 2px solid var(--color-cover);
+}
+#description {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 3rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+h2 {
+  display: flex;
+  justify-content: center;
 }
