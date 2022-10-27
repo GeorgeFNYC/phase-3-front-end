@@ -21,7 +21,7 @@ code {
 }
 /*******************************   Login/ Landing Page Component  ***************************************/
 .topRow {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 #ressportHP {
   background-color: var(--color-cover);
@@ -85,7 +85,7 @@ code {
   position: absolute;
   top: 0;
   left: 0;
-  height: 85vh;
+  height: 89vh;
   width: 51%;
   background-color: var(--color-cover);
   transform: skew(0deg, 0.2deg);
@@ -96,7 +96,7 @@ code {
   position: absolute;
   top: 0;
   right: 0;
-  height: 85vh;
+  height: 89vh;
   width: 50%;
   background-color: var(--color-cover);
   transform: skew(0deg, -0.2deg);
@@ -109,7 +109,7 @@ code {
   position: absolute;
   top: 0;
   left: 0;
-  height: 80vh;
+  height: 84vh;
   width: 51%;
   background-color: var(--color-pages);
   transform: skew(0deg, 0.2deg);
@@ -121,7 +121,7 @@ code {
   position: absolute;
   top: 0;
   right: 0;
-  height: 80vh;
+  height: 84vh;
   width: 50%;
   background-color:  var(--color-pages);
   transform: skew(0deg, -0.2deg);
@@ -204,7 +204,7 @@ ul {
   border: 2px solid var(--color-cover);
 }
 #description {
-  margin-top: 20px;
+  margin-top: 5px;
   width: 90%;
   margin-left: 3rem;
   font-size: 1.6rem;
@@ -214,21 +214,24 @@ h2 {
   display: flex;
   justify-content: center;
 }
+#moreInfo {
+  width: 100%;
+  text-align: center;
+}
 #starReview {
   margin-left: 3rem;
 }
 #pricePoint {
-  float: right;
-  margin-right: 3rem;
+  margin-left: 2rem;
 }
 #cuisineType {
-  margin-left: 5.5rem;
+  margin-left: 2rem;
 }
 #borough {
-  margin-top: 1rem;
+  margin-left: 1rem;
 }
 #borough, #address{
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 .addResBtn{
   margin-left: 3rem;

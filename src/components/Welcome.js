@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
-import Restaurants from './Restaurants'
+import React from 'react'
+
+import {Link} from 'react-router-dom'
+//import Restaurants from './Restaurants'
 
 
 function Welcome({ wishlist, beento  }) {
@@ -22,8 +24,13 @@ function Welcome({ wishlist, beento  }) {
                   )
                 }
                 )}
-                <a href='/restaurants'>Back to Res</a>
+                <div className='row'>
+                  <Link to={'/restaurants'}>
+                    <button className='addResBtn'>Add more restaurants to your wishlist</button>
+                  </Link>
+                </div>
             </div>
+            
             <div className='col-lg-6 rightContent'>
             <h2>Visited</h2>
                 {beento.map(restaurant => {
