@@ -1,7 +1,9 @@
 import React from 'react'
+import Restaurants from './Restaurants'
 
 
-function Welcome() {
+function Welcome({ wishlist }) {
+  console.log(wishlist)
   return (
     <div className='container'>
         <div className='row topRow'></div>
@@ -14,7 +16,14 @@ function Welcome() {
             </div>
             <div className='col-lg-6 rightContent'>
               <h2>Wishlist</h2>
-              <p>Restaurant 1</p>
+                {wishlist.map(restaurant => {
+                  return (
+                    <>
+                      <h1>{restaurant.restaurant.name}</h1>
+                    </>
+                  )
+                }
+                )}
             </div>
           </div>
         </div>
