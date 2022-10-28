@@ -42,6 +42,11 @@ function App() {
     setWish(newWishlist)
   }
 
+  const renderBeenTo = (newBeen) => {
+    const newBeenToList = [...visited, newBeen]
+    setVisited(newBeenToList)
+  }
+
   const renderDeleteWish = (deleteWish) => {
     let newWishlist = wish.filter(w => {
       return w.id !== deleteWish.id
@@ -52,7 +57,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} renderToWishlist={renderToWishlist}/>} />
+        <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} renderBeenTo={renderBeenTo}renderToWishlist={renderToWishlist}/>} />
         <Route exact path="/" element={<Login />}></Route>
         <Route exact path='/welcome' element={<Welcome wishlist={wish} beento={visited} renderDeleteWish={renderDeleteWish}/>}></Route>
         <Route exact path='/progress' element={<Progress />}></Route> 

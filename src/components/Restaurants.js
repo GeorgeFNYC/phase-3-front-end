@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import RestaurantInfo from './RestaurantInfo'
 
 
-function Restaurants( {restaurants, renderToWishlist} ) {
+function Restaurants( {restaurants, renderToWishlist, renderBeenTo } ) {
 
     const[showRes, setShowRes] = useState([])
     const [info, setInfo] = useState(false)
@@ -62,7 +62,12 @@ const addToVisited = (restaurant) => {
         })
     })
     .then((res) => res.json())
-    .then((data) => (data))
+    .then((data) => {
+        data.restaurant = restaurant
+        console.log(data)
+        renderBeenTo(data)
+})
+
 }
 
 

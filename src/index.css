@@ -151,6 +151,10 @@ code {
   border-radius: 25px;
   padding: 10px;
 }
+#addBtnRow {
+  display: flex;
+  justify-content: center;
+}
 /* #insideBook {
   background-color: #B3D7E9;
   height: 80vh;

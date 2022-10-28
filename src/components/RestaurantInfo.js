@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function RestaurantInfo({ renderToWishlist,restaurants, info, addToWishList, addToVisited, handleDeleteClick }) {
+function RestaurantInfo({ renderToWishlist, restaurants, info, addToWishList, addToVisited, handleDeleteClick }) {
 
+
+  console.log(restaurants, 'from restaurant info')
+
+  
    return (
     <>
     { info ? <>

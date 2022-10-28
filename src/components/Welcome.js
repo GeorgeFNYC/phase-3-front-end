@@ -7,6 +7,7 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 function Welcome({ wishlist, beento, renderDeleteWish  }) {
 
+  console.log(beento)
 
   const handleDeleteClick = (restaurants) => {
     console.log(restaurants);
@@ -35,9 +36,9 @@ function Welcome({ wishlist, beento, renderDeleteWish  }) {
                   )
                 }
                 )}
-                <div className='row'>
+                <div id='addBtnRow' className='row'>
                   <Link to={'/restaurants'}>
-                    <button className='addResBtn'>Add more restaurants to your wishlist</button>
+                    <button className='addResBtn'>add restaurants!</button>
                   </Link>
                 </div>
             </div>
@@ -48,12 +49,16 @@ function Welcome({ wishlist, beento, renderDeleteWish  }) {
 
                 {beento.map(restaurant => {
                   return (
-                    <div key={restaurant.id}>
-                      <p className='wishVisitedP' key={restaurant.id}>{restaurant.restaurant.name}</p>
-                    </div>
+                    <>
+                    {restaurant.restaurant ? <div key={restaurant.id}>
+                    <p className='wishVisitedP' key={restaurant.id}>{restaurant.restaurant.name}</p>
+                  </div> : <h1>Updating..</h1>}
+                    </>
+                    
+                    
                   )
                 }
-                )}
+                ) }
             </div>
           </div>
         </div>
