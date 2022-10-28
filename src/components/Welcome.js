@@ -1,13 +1,20 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 //import Restaurants from './Restaurants'
 
 
-function Welcome({ wishlist, beento  }) {
+function Welcome({ wishlist, beento, renderDeleteWish  }) {
 
-  console.log(wishlist)
-  console.log(beento, 'heyyyyyyyyy')
+
+  const handleDeleteClick = (restaurants) => {
+    console.log(restaurants);
+    fetch(`http://localhost:9292/wishlist/${restaurants.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then((data) => renderDeleteWish(data))
+  }
+
   return (
     <div className='container'>
         <div className='row topRow'></div>
@@ -18,9 +25,9 @@ function Welcome({ wishlist, beento  }) {
               <h2>Wishlist</h2>
                 {wishlist.map(restaurant => {
                   return (
-                    <>
-                      <h1>{restaurant.restaurant.name}</h1>
-                    </>
+                    <div key={restaurant.id}>
+                      <p className='wishVisitedP'>{restaurant.restaurant?.name}<span onClick={() => {handleDeleteClick(restaurant)}} className='minusWish'>remove</span></p>
+                    </div>
                   )
                 }
                 )}
@@ -33,11 +40,13 @@ function Welcome({ wishlist, beento  }) {
             
             <div className='col-lg-6 rightContent'>
             <h2>Visited</h2>
+              
+
                 {beento.map(restaurant => {
                   return (
-                    <>
-                      <h1>{restaurant.restaurant.name}</h1>
-                    </>
+                    <div key={restaurant.id}>
+                      <p className='wishVisitedP' key={restaurant.id}>{restaurant.restaurant.name}</p>
+                    </div>
                   )
                 }
                 )}

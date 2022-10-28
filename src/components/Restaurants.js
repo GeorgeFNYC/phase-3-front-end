@@ -3,14 +3,7 @@ import React, { useState, useEffect } from 'react'
 import RestaurantInfo from './RestaurantInfo'
 
 
-function Restaurants( {restaurants} ) {
-
-
-useEffect(() => {
-    
-})
-    //console.log(restaurants, 'restaurants variable')
-    //console.log(restaurants)
+function Restaurants( {restaurants, renderToWishlist} ) {
 
     const[showRes, setShowRes] = useState([])
     const [info, setInfo] = useState(false)
@@ -39,7 +32,6 @@ function showRestaurants (restaurant) {
 
 
 const addToWishList = (restaurant) => {
-    console.log(restaurant.id)
     fetch('http://localhost:9292/wishlist',
     
     {
@@ -52,17 +44,8 @@ const addToWishList = (restaurant) => {
         })
     })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => renderToWishlist(data))
 }
-
-const handleDeleteClick = (restaurants) => {
-    fetch(`http://localhost:9292/wishlist/${restaurants.id}`, {
-      method: "DELETE",
-    })
-      .then((r) => r.json())
-      .then((data) => console.log(data))
-      }
-
 
 
 
@@ -79,7 +62,7 @@ const addToVisited = (restaurant) => {
         })
     })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => (data))
 }
 
 
@@ -104,7 +87,7 @@ const addToVisited = (restaurant) => {
                     </div>
                 </div>
                 <div className='col-lg-6 rightContent'>
-                        <RestaurantInfo restaurants={showRes} info={info} addToWishList={addToWishList} addToVisited={addToVisited} handleDeleteClick={handleDeleteClick}/>
+                        <RestaurantInfo restaurants={showRes} info={info} addToWishList={addToWishList} addToVisited={addToVisited}/>
                         
                 </div>
             </div>

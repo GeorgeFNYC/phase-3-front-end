@@ -68,7 +68,7 @@ code {
 #flagHP {
   width: 30px;
 }
-/**********************************  Welcome page component w/ visited and wishlist  ****************************/
+/*****************************  Welcome page component w/ visited and wishlist  *************************/
 
 /* #welcomeDiv {
   background-color: #003875;
@@ -137,6 +137,19 @@ code {
 .rightContent {
   z-index: 2;
   margin-top: 12px;
+}
+.wishVisitedP {
+  font-size: 2.5rem;
+  cursor: default;
+}
+.minusWish {
+  margin-left: 3rem;
+  cursor: pointer;
+  width: 50%;
+  font-size: 2rem;
+  color: var(--color-cover);
+  border-radius: 25px;
+  padding: 10px;
 }
 /* #insideBook {
   background-color: #B3D7E9;

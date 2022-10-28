@@ -25,7 +25,6 @@ function App() {
     .then((response) => response.json())
     .then(wishlist => {
       setWish(wishlist) 
-      //setVisited(wishlist)
     });
 
 
@@ -33,27 +32,29 @@ function App() {
     .then((response) => response.json())
     .then(visited => {
       setVisited(visited) 
-      //setVisited(wishlist)
+
     });
 
-
-    // fetch('http://localhost:9292/wishlist')
-    // .then((response) => response.json())
-    // .then(visitedList => setVisited(visitedList));
   },[])
 
-  
+  const renderToWishlist = (newWish) => {
+    const newWishlist = [...wish, newWish]
+    setWish(newWishlist)
+  }
 
-  // console.log(restaurants[0].reviews)
-
-  //const[hide, setHide] = useState(true)
+  const renderDeleteWish = (deleteWish) => {
+    let newWishlist = wish.filter(w => {
+      return w.id !== deleteWish.id
+    })  
+    setWish(newWishlist)
+  }
 
   return (
     <>
       <Routes>
-        <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} />} />
+        <Route exact path='/restaurants' element={<Restaurants restaurants={restaurants} renderToWishlist={renderToWishlist}/>} />
         <Route exact path="/" element={<Login />}></Route>
-        <Route exact path='/welcome' element={<Welcome wishlist={wish} beento={visited} />}></Route>
+        <Route exact path='/welcome' element={<Welcome wishlist={wish} beento={visited} renderDeleteWish={renderDeleteWish}/>}></Route>
         <Route exact path='/progress' element={<Progress />}></Route> 
         <Route exact path='/restaurantsInfo' element={<RestaurantInfo />}></Route>
       </Routes>

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function RestaurantInfo({ restaurants, info, addToWishList, addToVisited, handleDeleteClick }) {
-
-    console.log(restaurants, ' From res info ')
+function RestaurantInfo({ renderToWishlist,restaurants, info, addToWishList, addToVisited, handleDeleteClick }) {
 
    return (
     <>
@@ -20,8 +18,7 @@ function RestaurantInfo({ restaurants, info, addToWishList, addToVisited, handle
       </div>
       <button onClick={()=> addToWishList(restaurants)} className='addResBtn'>Add {restaurants.name} to your wishlist!</button>
       <Link to={'/welcome'}><button className='addResBtn' >View your wishlist</button></Link>
-      <button onClick={() => addToVisited(restaurants)}>I've been to</button>
-      <button onClick={()=> handleDeleteClick(restaurants)} id='Removefromwishlist'>Remove from Wishlist</button> 
+      <button onClick={() => addToVisited(restaurants)}>I've been to</button> 
       {/* <a href='/welcome' id='backBtn'>View your wishlist</a> */}
       </> 
       : <></>
