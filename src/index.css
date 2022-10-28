@@ -247,11 +247,11 @@ h2 {
   margin-left: 2rem;
 }
 .addResBtn{
-  margin-left: 3rem;
-  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 .addResBtn {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   border-radius: 20px;
   border: none;
   padding: 5px 10px;
@@ -259,4 +259,12 @@ h2 {
 }
 .addResBtn:hover {
   background-color: var(--color-pages);
+}
+#addAndViewBtn {
+  display: flex;
+  justify-content: space-around;
+}
+#lastBtnDiv {
+  display: flex;
+  justify-content: center;
 }

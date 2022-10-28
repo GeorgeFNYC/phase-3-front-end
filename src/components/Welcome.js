@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 //import Restaurants from './Restaurants'
 
 
@@ -26,7 +28,9 @@ function Welcome({ wishlist, beento, renderDeleteWish  }) {
                 {wishlist.map(restaurant => {
                   return (
                     <div key={restaurant.id}>
-                      <p className='wishVisitedP'>{restaurant.restaurant?.name}<span onClick={() => {handleDeleteClick(restaurant)}} className='minusWish'>remove</span></p>
+
+                      {/* <FontAwesomeIcon icon={faEnvelope} /> */}
+                      <p className='wishVisitedP'>{restaurant.restaurant?.name}<FontAwesomeIcon style={{ width: '12px', padding: '0', marginLeft: '3rem'}} icon={faTrashCan} onClick={() => {handleDeleteClick(restaurant)}} className='minusWish'>remove</FontAwesomeIcon></p>
                     </div>
                   )
                 }

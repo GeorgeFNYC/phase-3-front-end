@@ -16,9 +16,13 @@ function RestaurantInfo({ renderToWishlist,restaurants, info, addToWishList, add
         <span id='borough'><strong><em>Borough:</em></strong> {restaurants.location}</span>
         <span id='address'><strong><em>Address:</em></strong> {restaurants.address}</span>
       </div>
-      <button onClick={()=> addToWishList(restaurants)} className='addResBtn'>Add {restaurants.name} to your wishlist!</button>
-      <Link to={'/welcome'}><button className='addResBtn' >View your wishlist</button></Link>
-      <button onClick={() => addToVisited(restaurants)}>I've been to</button> 
+      <div id='addAndViewBtn'>
+        <button onClick={()=> addToWishList(restaurants)} className='addResBtn'>add {restaurants.name} to your wishlist!</button>
+        <Link to={'/welcome'}><button className='addResBtn' >view your wishlist</button></Link>
+      </div>
+      <div id='lastBtnDiv'>
+        <button className='addResBtn' onClick={() => addToVisited(restaurants)}>been there!</button> 
+      </div>
       {/* <a href='/welcome' id='backBtn'>View your wishlist</a> */}
       </> 
       : <></>
